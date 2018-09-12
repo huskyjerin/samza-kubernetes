@@ -15,11 +15,10 @@ pipeline {
 
                 echo 'Hello Stage 2!'
 
-                sh 'wget https://services.gradle.org/distributions/gradle-3.4.1-bin.zip'
-		sh 'sudo mkdir /opt/gradle'
-		sh 'sudo unzip -d /opt/gradle gradle-3.4.1-bin.zip'
-		sh 'export PATH=$PATH:/opt/gradle/gradle-3.4.1/bin'
-		sh 'gradle -v'
+                sh 'git clone https://github.com/gradle-guides/gradle-site-plugin.git'
+		sh 'cd gradle-site-plugin'
+		sh './gradlew  build'
+		sh 'cd ..'	
 		sh 'gradle dockerDistTar'               
             }
         }
