@@ -14,12 +14,8 @@ pipeline {
             steps {
 
                 echo 'Hello Stage 2!'
-                if (isUnix()) {
-                 dir('sub-dir'){sh './gradle dockerDistTar'}
-                } else {
-			dir('sub-dir'){bat 'gradlew.bat clean build'}
-		}
-                
+
+               sh './gradle dockerDistTar'               
             }
         }
         stage('Stage 3') {
