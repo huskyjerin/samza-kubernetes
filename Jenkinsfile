@@ -15,7 +15,7 @@ pipeline {
 
                 echo 'Hello Stage 2!'
 
-               sh './gradle dockerDistTar'               
+               sh 'gradle dockerDistTar'               
             }
         }
         stage('Stage 3') {
