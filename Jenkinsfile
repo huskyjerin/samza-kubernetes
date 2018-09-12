@@ -17,7 +17,7 @@ pipeline {
 
                sh 'wget https://services.gradle.org/distributions/gradle-3.4.1-bin.zip'
 		sh 'sudo mkdir /opt/gradle'
-		sh 'sudo unzip -d '/opt/gradle gradle-3.4.1-bin.zip'
+		sh 'sudo unzip -d /opt/gradle gradle-3.4.1-bin.zip'
 		sh 'export PATH=$PATH:/opt/gradle/gradle-3.4.1/bin'
 		sh 'gradle -v'
 		sh 'gradle dockerDistTar'               
