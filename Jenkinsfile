@@ -16,7 +16,7 @@ node {
                 echo 'Hello Stage 2!'
 
                def GRADLE_HOME = tool name: 'gradle', type: 'hudson.plugins.gradle.GradleInstallation'	
-		sh 'gradle dockerDistTar'               
+		sh '${GRADLE_HOME}/bin/gradle dockerDistTar'               
             
         }
         stage('Stage 3') {
