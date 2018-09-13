@@ -27,7 +27,11 @@ node {
                 sh 'cd /var/lib/jenkins/workspace/pipeline-testing/example/'
 		sh 'pwd'
 		sh 'cd /var/lib/jenkins/workspace/pipeline-testing/example/build/docker'
-		sh 'pwd'            
+		sh 'pwd'
+		def testImage = docker.build("test-image","./var/lib/jenkins/workspace/pipeline-testing/example/build/docker")
+
+	
+            
         }
         stage('Stage 4') {
             
