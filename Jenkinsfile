@@ -15,10 +15,7 @@ pipeline {
 
                 echo 'Hello Stage 2!'
 
-                sh 'git clone https://github.com/gradle-guides/gradle-site-plugin.git'
-		sh 'cd gradle-site-plugin'
-		sh './gradlew  build'
-		sh 'cd ..'	
+               def GRADLE_HOME = tool name: 'gradle', type: 'hudson.plugins.gradle.GradleInstallation'	
 		sh 'gradle dockerDistTar'               
             }
         }
