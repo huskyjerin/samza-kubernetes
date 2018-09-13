@@ -25,7 +25,9 @@ node {
 
                 echo 'Hello world!' 
                 sh 'cd /var/lib/jenkins/workspace/pipeline-testing/example/'
-            
+		sh 'pwd'
+		sh 'cd /var/lib/jenkins/workspace/pipeline-testing/example/build/docker'
+		sh 'pwd'            
         }
         stage('Stage 4') {
             
