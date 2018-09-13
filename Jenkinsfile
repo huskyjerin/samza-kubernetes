@@ -1,4 +1,5 @@
 node {
+	checkout scm
     agent {
         docker { image 'node:9-alpine' }
     } 
