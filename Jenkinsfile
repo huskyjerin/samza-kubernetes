@@ -24,7 +24,7 @@ node {
             
 
                 echo 'Hello world!' 
-                sh 'cd /example'
+                sh 'cd /var/lib/jenkins/workspace/pipeline-testing/example/'
             
         }
         stage('Stage 4') {
