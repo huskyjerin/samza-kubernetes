@@ -69,7 +69,7 @@ project(':example') {
 
     docker {
 	javaApplication {
-	    baseImage = 'openjdk:jre-8'
+	    baseImage = 'openjdk'
 	    tag = 'exampleapp:1.0-0.14'
 	    exec {
 		entryPoint('exampleApp/bin/exampleApp',
