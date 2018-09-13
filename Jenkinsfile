@@ -2,7 +2,7 @@ node {
     agent {
         docker { image 'node:9-alpine' }
     } 
-    stages {
+   
         stage('Stage 1') {
             steps {
 
@@ -33,5 +33,5 @@ node {
                 sh 'pwd'
             }
         }
-    }
+    
 }
